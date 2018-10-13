@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圆角</title>
+    <style>
+        #left{
+            width: 500px;
+            height: 250px;
+            margin:100px auto;
+            background-color: gold;
+
+            /*添加边框圆角*/
+            /*1.设置一个值：四个角的圆角值都一样*/
+            /*border-radius: 10px;*/
+
+            /*2.设置两个值:第一个值控制左上/右下，第二个值控制右上/左下*/
+            /*border-radius: 10px 30px;*/
+
+            /*3.设置三个值：第一个值控制左上，第二值控制右上/左下，第三个值控制右下*/
+            /*border-radius: 10px 40px 60px;*/
+
+            /*4.设置四个值：左上  右上 右下 左下*/
+            /*border-radius: 10px 30px 60px 100px;*/
+
+            /*添加某个角点的圆角*/
+            /*border-上下-左右-radius:*/
+            /*  border-top-right-radius: 100px*/
+
+            /*设置某个角点的两个方向上的不同圆角*/
+            border-top-right-radius: 100px 50px;
+            /*椭圆*/
+            /* border-radius: 250px/125px;*/
+
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="left"></div>
+<div id="right"></div>
+
+</body>
+</html>

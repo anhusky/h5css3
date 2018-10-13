@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>安卓机器人</title>
+</head>
+<body>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .android {
+        width: 500px;
+        height: 500px;
+        margin: 100px auto;
+        border: 1px solid red;
+        /*transform: rotate(-45deg);*/
+    }
+
+    body {
+        background-color: #ccc;
+    }
+
+    .android-head,
+    .android-body,
+    .android-footer {
+        width: 250px;
+        height: 125px;
+        background-color: green;
+        margin: 10px auto;
+
+    }
+
+    .android-head {
+        border-radius: 125px 125px 0 0;
+        position: relative;
+    }
+
+    /* 眼睛 */
+    .android-head::before,
+    .android-head::after {
+        content: "";
+        background-color: #fff;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        bottom: 45px;
+        border-radius: 50%;
+    }
+
+    .android-head::before {
+        left: 50px;
+    }
+
+    .android-head::after {
+        right: 50px;
+    }
+
+    .android-body {
+        margin: auto;
+        position: relative;
+        height: 250px;
+    }
+
+    /* 身体 */
+    .android-body::before,
+    .android-body::after {
+        content: "";
+        background-color: green;
+        width: 30px;
+        height: 200px;
+        position: absolute;
+        border-radius: 5px;
+        top: 20px;
+    }
+
+    .android-body::before {
+        left: -50px;
+    }
+
+    .android-body::after {
+        right: -50px;
+    }
+
+    .android-footer {
+        background-color: transparent;
+        position: relative;
+        margin: auto;
+    }
+    /* 腿 */
+    .android-footer::before,
+    .android-footer::after {
+        content: "";
+        background-color: green;
+        width: 30px;
+        height: 100px;
+        position: absolute;
+        border-radius:0 0 5px 5px;
+    }
+    .android-footer::before {
+        left: 50px;
+    }
+
+    .android-footer::after {
+        right: 50px;
+    }
+
+</style>
+
+<div class="android">
+    <div class="android-head"></div>
+
+    <div class="android-body"></div>
+
+    <div class="android-footer"></div>
+
+</div>
+
+
+</body>
+</html>
