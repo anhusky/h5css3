@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        div {
+            display: block;
+            width: 100%;
+            height: 360px;
+            border: 1px solid red;
+            margin: 0 auto;
+
+            /*
+                1. 添加背景样式
+                    颜色 bgc 设置
+                    图片 bgi
+                        默认：图片>容器，从容器左上角显示，可能显示不全
+                              图片<容器，图片默认会平铺
+            */
+            background-image: url("../images/04/slide_01_2000x410.jpg");
+            /*
+                重复样式：
+                    默认：interit: X Y 平铺,不一定正好铺满
+                    round: 将图片缩放之后平铺，正好铺满
+                    space: 不缩放，图片有间距，正好铺满
+                    no-repeat:默认方式，显示一个
+            */
+            background-repeat: no-repeat;
+
+            /*
+                local和scroll的区别：前提是滚动当前容器的内容
+                local:背景图片会跟随内容一起滚动
+                scroll:背景图片不会跟随内容一起滚动
+            */
+            background-attachment: scroll;
+
+            /*
+
+                cover: 放大图片，填充背景,可能失真
+                contain:缩小图片,填充北京，不会失真，可能留白 ，这个使用较多
+                50% 50%
+                50%
+                300px 500px
+                300px
+            */
+            background-size: cover;
+
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+   <!-- CSS里的background-size属性能够让程序员决定如
+    何在指定的元素里展示,它通过改变背景尺寸的通过各种不同是属性值改变
+    背景尺寸呈现的大小。往往建议不要将图放大，如果有需要，尽量让图缩小
+    d)cover：此值是将图片放大，以适合铺满整个容器，这个主要运用在，
+    当图片小于容器时，又无法使用background-repeat来实现时，我们就可以采用cover;将背景图片放大到适合容器的大小
+    e)contain：此值刚好与cover相反，其主要是将背景图片缩小，
+    以适合铺满整个容器，这个主要运用在，当背景图片大于元素容器时，而又需要将背景图片全部显示出来，此时我们就可以使用contain将图片缩小到适合容器大小为止。
+    f)当background-size取值为number和percentage时可以设置两个值
+    ，也可以设置一个值，当只取一个值时，第二个值相当于auto，但
+    这里的auto并不会使背景图片的高度保持自己原始高度，而是会参
+    照第一个参数值进行等比例缩放。-->
+</div>
+<span style="height: 800px;display: block"></span>
+</body>
+</html>
